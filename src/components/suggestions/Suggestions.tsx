@@ -2,6 +2,7 @@ import classes from "./Suggestions.module.css";
 import WordList from "../words/WordsList";
 import { IconSettings, IconArrowsShuffle } from "@tabler/icons-react";
 import { useState } from "react";
+import ReactSlider from "react-slider";
 
 const Suggestions = () => {
   const address = "http://10.18.15.205:5007/home";
@@ -42,32 +43,45 @@ const Suggestions = () => {
   };
   return (
     <>
-      {settings ? (
+      {!settings ? (
         <div className={classes.div}>
           <h2>Suggestions</h2>
           <WordList words={data} isLoading={loading} />
           <section>
-            <IconSettings
-              size={60}
-              onClick={settingsHandler}
-              className={classes.settings}
-            />
             <IconArrowsShuffle
               size={60}
               onClick={shuffleListHandler}
               className={classes.shuffle}
             />
-          </section>
-        </div>
-      ) : (
-        <div className={classes.div}>
-          <h2>Settings</h2>
-          <WordList words={data} isLoading={loading} />
-          <section>
             <IconSettings
               size={60}
               onClick={settingsHandler}
               className={classes.settings}
+            />
+          </section>
+        </div>
+      ) : (
+        <div className={classes.div2}>
+          <h2>Settings</h2>
+          <section>
+            <label>Creativity</label>
+            <ReactSlider
+              className={classes.slider}
+              thumbClassName={classes.sliderThunb}
+              min={0}
+              max={10}
+            />
+            <label>Mood</label>
+            <ReactSlider
+              className={classes.slider}
+              thumbClassName={classes.sliderThunb}
+              min={0}
+              max={10}
+            />
+            <IconSettings
+              size={60}
+              onClick={settingsHandler}
+              className={classes.settings2}
             />
           </section>
         </div>

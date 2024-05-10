@@ -10,22 +10,64 @@
   font-size: 1.2rem;
 }
 
+.div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--suggestions);
+  min-height: 85vh;
+  width: 40vw;
+  justify-content: space-around;
+  color: var(--header-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .div h2 {
   text-decoration: underline;
+}
+
+.div2 label {
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .suggestions section {
   display: flex;
   margin: 1.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .settings {
-  margin-right: 3rem;
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.settings2 {
+  margin: 10rem 0 0 8rem;
   cursor: pointer;
 }
 
 .shuffle {
-  margin-left: 3rem;
+  margin-right: 3rem;
   cursor: pointer;
+}
+
+.slider {
+  height: 2rem;
+  width: 20rem;
+  margin: 0.5rem;
+  background-color: var(--header-color);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sliderThunb {
+  background-color: var(--text-color);
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20px;
 }
