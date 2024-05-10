@@ -50,6 +50,12 @@
   align-items: center;
 }
 
+.div2 section section button:hover {
+  background-color: var(--text-color);
+  color: var(--header-color);
+}
+
+
 .suggestions section {
   display: flex;
   margin: 1.5rem;
