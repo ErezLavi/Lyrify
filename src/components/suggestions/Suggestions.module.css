@@ -1,0 +1,31 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--suggestions);
+  min-height: 85vh;
+  width: 40vw;
+  color: var(--header-color);
+  font-size: 1.2rem;
+}
+
+.div h2 {
+  text-decoration: underline;
+}
+
+.suggestions section {
+  display: flex;
+  margin: 1.5rem;
+  align-items: center;
+}
+
+.settings {
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.shuffle {
+  margin-left: 3rem;
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+:root {
+  --header-color: #e3d2bf;
+  --text-color: #161a30;
+}
+
+.header {
+  background-color: var(--header-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+}
+
+.header section {
+  margin-left: 2rem;
+}
+
+.header label {
+    font-size: 3rem;
+    font-weight: 700;
+}

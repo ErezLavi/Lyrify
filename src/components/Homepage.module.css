@@ -1,0 +1,9 @@
+:root {
+    --songEditor: #FCF5ED;
+    --suggestions: #161A30;
+}
+
+.div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
