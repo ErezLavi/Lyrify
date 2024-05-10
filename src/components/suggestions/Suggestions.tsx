@@ -78,6 +78,17 @@ const Suggestions = () => {
               min={0}
               max={10}
             />
+            <section>
+              <label>Genre</label>
+              <div>
+                <button>Rap</button>
+                <button>Pop</button>
+                <button>Rock</button>
+                <button>R&B</button>
+                <button>Folk</button>
+                <button>Punk</button>
+              </div>
+            </section>
             <IconSettings
               size={60}
               onClick={settingsHandler}

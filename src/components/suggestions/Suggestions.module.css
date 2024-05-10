@@ -28,9 +28,26 @@
 }
 
 .div2 label {
-  margin: 1.5rem;
+  margin: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.div2 section section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20rem;
+}
+
+.div2 section section button {
+  width: 6rem;
+  background-color: var(--header-color);
+  border-radius: 1.5rem;
+  margin: 0.2rem;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  align-items: center;
 }
 
 .suggestions section {
@@ -46,7 +63,7 @@
 }
 
 .settings2 {
-  margin: 10rem 0 0 8rem;
+  margin: 2rem 0 0 8rem;
   cursor: pointer;
 }
 
