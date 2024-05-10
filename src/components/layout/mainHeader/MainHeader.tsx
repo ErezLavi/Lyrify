@@ -5,7 +5,7 @@ const MainNavigation: React.FC = () => {
   return (
     <header className={classes.header}>
       <section>
-        <label>Lyrify</label>
+        <label>SongMate</label>
       </section>
     </header>
   );
