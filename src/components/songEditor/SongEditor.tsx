@@ -1,13 +1,19 @@
-import React, { useState } from "react";
 import classes from "./SongEditor.module.css";
 
+interface SongEditorProps {
+  song: {
+    title: string;
+    lyrics: string;
+  };
+  setSong: React.Dispatch<
+    React.SetStateAction<{
+      title: string;
+      lyrics: string;
+    }>
+  >;
+}
 
-const SongEditor = () => {
-  const [song, setSong] = useState({
-    title: "",
-    lyrics: "",
-  });
-
+const SongEditor: React.FC<SongEditorProps> = ({ song, setSong }) => {
   const changeTitleHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setSong((prev) => ({
@@ -22,7 +28,7 @@ const SongEditor = () => {
       ...prev,
       [name]: value,
     }));
-  }
+  };
 
   return (
     <section className={classes.section}>
@@ -30,7 +36,7 @@ const SongEditor = () => {
         <input
           type="text"
           id="title"
-          placeholder="Enter Title here..."
+          placeholder="Enter song description here..."
           name="title"
           value={song.title}
           onChange={changeTitleHandler}

@@ -4,7 +4,14 @@ import { IconSettings, IconArrowsShuffle } from "@tabler/icons-react";
 import { useState } from "react";
 import ReactSlider from "react-slider";
 
-const Suggestions = () => {
+interface SongEditorProps {
+  song: {
+    title: string;
+    lyrics: string;
+  };
+}
+
+const Suggestions: React.FC<SongEditorProps> = ({ song }) => {
   const address = "http://10.18.15.205:5007/home";
   const IP_ADDR = "http://10.18.15.202:5173";
   const [data, setData] = useState<string[]>([]);
@@ -15,11 +22,12 @@ const Suggestions = () => {
     try {
       setLoading(true);
       const response = await fetch(address, {
-        method: "GET", // Specify the request method
+        method: "POST", // Specify the request method
         headers: {
           Origin: IP_ADDR,
           "Content-Type": "application/json",
         },
+        body: JSON.stringify({ song: song.lyrics, context: song.title }),
       });
       if (!response.ok) {
         throw new Error("HTTP error, status = " + response.status);

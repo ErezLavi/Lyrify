@@ -1,4 +1,9 @@
 .div {
     margin: 0.5rem;
     font-size: 2rem;
+    cursor: pointer;
+}
+
+.div:hover{
+    color: #F8C794
 }

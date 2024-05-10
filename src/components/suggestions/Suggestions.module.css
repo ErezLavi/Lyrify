@@ -55,7 +55,6 @@
   color: var(--header-color);
 }
 
-
 .suggestions section {
   display: flex;
   margin: 1.5rem;
@@ -68,14 +67,26 @@
   cursor: pointer;
 }
 
+.settings:hover {
+  color: #F8C794;
+}
+
 .settings2 {
-  margin: 2rem 0 0 8rem;
+  margin: 3rem 0 0 8rem;
   cursor: pointer;
+}
+
+.settings2:hover {
+  color: #F8C794;
 }
 
 .shuffle {
   margin-right: 3rem;
   cursor: pointer;
+}
+
+.shuffle:hover {
+  color: #F8C794;
 }
 
 .slider {
